@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.ApiOfertas.ApiDTO;
 import org.example.ApiOfertas.ApiOfertas;
 
 import java.util.List;
@@ -10,11 +11,11 @@ public class Main {
 
         ApiOfertas api = new ApiOfertas();
 
-        List<Map<String, Object>> teste = api.buscarOfertas();
+        List<ApiDTO> teste = api.buscarOfertas();
 
-        for(Map<String, Object> game : teste){
-            System.out.println(game.get("nome"));
-            System.out.println(game.get("linkLoja"));
+        for(ApiDTO game : teste){
+            System.out.println(game.getNome());
+            System.out.println(game.getLinkLoja());
         }
     }
 }
